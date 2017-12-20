@@ -16,6 +16,7 @@ module.exports = {
     path: config.assetsPath,
     filename: '[name].js'
   },
+  // 文件路径指向
   resolve: {
     alias: {
       utils: r('../utils/utils')
@@ -34,7 +35,7 @@ module.exports = {
         }
       },
       {
-        test: /\.sass$/,
+        test: /\.sass$/,  // sass对应的loader
         use: extractSass.extract({
           use: [
             {
@@ -59,7 +60,7 @@ module.exports = {
               }
             }
           ],
-          fallback: 'style-loader'
+          fallback: 'style-loader'   
         })
       },
       {
@@ -73,7 +74,7 @@ module.exports = {
   },
   plugins: [
     extractSass,
-    new CopyWebpackPlugin([
+    new CopyWebpackPlugin([  // 拷贝对应的资源到指定的路径
       {
         from : {
           glob: 'pages/**/*.json',
@@ -84,10 +85,10 @@ module.exports = {
         to: 'static'
       }
     ]),
-    new webpack.optimize.ModuleConcatenationPlugin(),
+    new webpack.optimize.ModuleConcatenationPlugin(),  // 提升作用域，提高运行效率
     new webpack.optimize.UglifyJsPlugin({
       souceMap: false
     }),
-    new ProgressBarPlugin()
+    new ProgressBarPlugin() // 打包进度条
   ]
 }
