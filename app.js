@@ -10,6 +10,8 @@ App({
     this.globalData.userInfo = userInfo
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    qiniuCDN: 'https://p09h7s4y2.bkt.clouddn.com',
+    serverUrl: 'http://fabedh.natappfree.cc'
   }
 })

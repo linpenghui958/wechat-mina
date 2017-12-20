@@ -6,7 +6,11 @@ var config = {
   "json": {
     "pages":[
       "pages/index/index",
-      "pages/logs/logs"
+      "pages/house/house",
+      "pages/deal/deal",
+      "pages/character/character",
+      "pages/shopping/shopping",
+      "pages/user/user"
     ],
     
     "tabBar": {
@@ -16,22 +20,27 @@ var config = {
         {
           "iconPath": "static/home.png",
           "selectedIconPath": "static/home-selected.png",
-          "pagePath": "page/index/index",
+          "pagePath": "pages/index/index",
           "text": "家族脸谱"
+        }, 
+        {
+          "iconPath": "static/shopping.png",
+          "selectedIconPath": "static/shopping-selected.png",
+          "pagePath": "pages/shopping/shopping",
+          "text": "冰火周边"
         },
         {
           "iconPath": "static/user.png",
           "selectedIconPath": "static/user-selected.png",
-          "pagePath": "page/logs/logs",
+          "pagePath": "pages/user/user",
           "text": "我的账户"
         }
-        
       ]
     }
   },
   "window": {
     "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "演示",
+    "navigationBarTitleText": "冰火之歌",
     "navigationBarBackgroundColor": "#F8F8F8",
     "backgroundColor": "#F8F8F8"
   },

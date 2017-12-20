@@ -23,9 +23,9 @@ const asyncWrap = fn => (options = {}) => new Promise((resolve, reject) => {
 
 wx.loginAsync = asyncWrap('login')
 wx.getUserInfoAsync = asyncWrap('getUserInfo')
-wx.requestAsync = asyncWrap('request')
+wx.reqAsync = asyncWrap('request')
 wx.getSystemInfoAsync = asyncWrap('getSystemInfo')
-wx.paymentAsync = asyncWrap('requestPayment')
+wx.payAsync = asyncWrap('requestPayment')
 
 let lastTime = 0
 // 过场动画封装
