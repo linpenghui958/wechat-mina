@@ -7,7 +7,7 @@ view.container
           view.caption {{item.words}}
           view.headline {{item.cname}}
           view.title {{item.name}}
-        image.carousel-media(src='{{qiniuCDN}}/{{item.cname}}.png', mode='widthFix')
+        image.carousel-media(src='{{qiniuCDN}}/{{item.cname}}.jpg', mode='widthFix')
   view.hr
   view.section
     view.section-title 主要人物

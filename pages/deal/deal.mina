@@ -135,7 +135,7 @@ Page({
     // code 时间是 5 分钟，所以直接拿新的 code
     const { code } = await wx.loginAsync()
     const userInfo = await wx.getUserInfoAsync()
-
+    // 请求后台返回订单信息
     let order = await wx.reqAsync({
       url: `${app.globalData.serverUrl}/mina/createOrder`,
       method: 'POST',
@@ -155,9 +155,9 @@ Page({
         content: order.data.msg || order.data
       })
     }
-
+    // 请求微信支付接口
     let res = await wx.payAsync(order.data.order)
-
+    // 请求后台支付接口
     res = await wx.reqAsync({
       url: `${app.globalData.serverUrl}/mina/payment`,
       method: 'POST',

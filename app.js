@@ -12,6 +12,6 @@ App({
   globalData: {
     userInfo: null,
     qiniuCDN: 'https://p09h7s4y2.bkt.clouddn.com',
-    serverUrl: 'http://fabedh.natappfree.cc'
+    serverUrl: 'http://127.0.0.1:3000'
   }
 })
